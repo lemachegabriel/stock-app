@@ -1,8 +1,18 @@
 import Link from 'next/link'
 import styles from '../pages/style.module.css'
 import LoginForm from '../components/LoginForms'
+import axios from 'axios'
+
+axios.defaults.withCredentials = true
 
 function home(){
+
+    const createCookie = () => {
+        axios.get('https://quiet-refuge-47031.herokuapp.com/api/cookies',{ withCredentials: true }).then((res) =>{
+          console.log(res.data)
+        })
+      }
+
     return(
         <h1 className={styles.style}>
             Read{' '}
@@ -10,6 +20,9 @@ function home(){
             <a>this page!</a>
             </Link>
             <LoginForm></LoginForm>
+            <div className="box">
+                <button className="button green" onClick={createCookie}>Create Cookies</button>
+            </div>
         </h1>
         
     )
