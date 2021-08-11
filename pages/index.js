@@ -12,6 +12,11 @@ function home(){
           console.log(res.data)
         })
       }
+    const getCookie = () => {
+        axios.get('https://quiet-refuge-47031.herokuapp.com/api/cookiesGet',{ withCredentials: true }).then((res) =>{
+          console.log(res.data)
+        })
+    }
 
     return(
         <h1 className={styles.style}>
@@ -22,6 +27,7 @@ function home(){
             <LoginForm></LoginForm>
             <div className="box">
                 <button className="button green" onClick={createCookie}>Create Cookies</button>
+                <button className="button red" onClick={getCookie}>get</button>
             </div>
         </h1>
         
