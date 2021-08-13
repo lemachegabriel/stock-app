@@ -9,7 +9,7 @@ axios.defaults.withCredentials = true
 function home(){
 
     const getCookie = () => {
-        axios.get('http://localhost:8000/api/cookiesGet',{ withCredentials: true }).then((res) =>{
+        axios.get('https://quiet-refuge-47031.herokuapp.com/api/cookiesGet',{ withCredentials: true }).then((res) =>{
           console.log(res.data)
         })
     }

@@ -3,7 +3,7 @@ import axios from 'axios'
 
 function FirstPost() {
   const logout = () => {
-    axios.get('http://localhost:8000/api/logout',{ withCredentials: true }).then((res) =>{
+    axios.get('https://quiet-refuge-47031.herokuapp.com/api/logout',{ withCredentials: true }).then((res) =>{
       console.log(res.data)
     })
   }
@@ -17,7 +17,6 @@ function FirstPost() {
       </h2>
       <div className="button">
         <button className="logout_butt" onClick={logout}>Sair</button>
-
       </div>
     </>
   )
