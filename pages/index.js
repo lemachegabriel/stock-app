@@ -25,7 +25,7 @@ function home(){
             </Link>
             <LoginForm></LoginForm>
             <div className="box">
-                <button className="button red" onClick={getCookie}>get</button>
+                <button className={styles.button} onClick={getCookie}>get</button>
                 <button className="button green" onClick={redirect_register}>registre</button>
             </div>
         </h1>
