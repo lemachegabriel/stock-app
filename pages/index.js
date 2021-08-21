@@ -3,7 +3,6 @@ import styles from '../pages/style.module.css'
 import LoginForm from '../components/LoginForms'
 import { verify_cookie_auth } from '../lib/verify_cookie_auth'
 import Router from 'next/dist/next-server/server/router'
-import SearchBar from '../components/search'
 
 export default function home(){
 
@@ -23,7 +22,7 @@ export default function home(){
                     <button className={styles.button} onClick={verify_cookie_auth}>get</button>
                     <button className="button green" onClick={redirect_register}>registre</button>
                 </div>
-                <SearchBar placeholder="Pesquise um ativo"></SearchBar>
+                
             </h1>
     )
 }

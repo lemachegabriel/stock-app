@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {logout} from '../../lib/logout'
 import UserInfo from '../../components/UserProfile'
-import SearchBar from '../../components/search'
+import SearchBar from '../../components/Search'
 
 function FirstPost() {
   return (
