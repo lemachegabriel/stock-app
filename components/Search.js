@@ -1,4 +1,3 @@
-import { ClearRounded } from "@material-ui/icons";
 import React, {useState} from "react";
 import styles from './Search.module.css'
 
