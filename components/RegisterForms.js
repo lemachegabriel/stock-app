@@ -65,7 +65,7 @@ class RegisterForm extends React.Component {
                     onChange={this.handleChange}
                     />
                 </div>
-                <div><input type="email" 
+                <div><input 
                     name="email"
                     placeholder="email"
                     onChange={this.handleChange}
