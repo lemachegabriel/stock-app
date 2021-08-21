@@ -23,7 +23,7 @@ export default function home(){
                     <button className={styles.button} onClick={verify_cookie_auth}>get</button>
                     <button className="button green" onClick={redirect_register}>registre</button>
                 </div>
-                <SearchBar></SearchBar>
+                <SearchBar placeholder="Pesquise um ativo"></SearchBar>
             </h1>
     )
 }

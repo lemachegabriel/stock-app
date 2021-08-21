@@ -10,7 +10,7 @@ function FirstPost() {
         <UserInfo></UserInfo>
       </h1>
       <h1>
-        <SearchBar></SearchBar>
+        <SearchBar placeholder="Pesquise um ativo"></SearchBar>
       </h1>
       <h2>
         <Link href="/">
