@@ -6,11 +6,11 @@ import SearchBar from '../../components/search'
 function FirstPost() {
   return (
     <>
-      <h1>
-        <SearchBar></SearchBar>
+    <h1>
+        <UserInfo></UserInfo>
       </h1>
       <h1>
-        <UserInfo></UserInfo>
+        <SearchBar></SearchBar>
       </h1>
       <h2>
         <Link href="/">
