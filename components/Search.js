@@ -1,6 +1,5 @@
+import { ClearRounded } from "@material-ui/icons";
 import React, {useState} from "react";
-import SearchIcon from "@material-ui/icons/Search";
-import CloseIcon from "@material-ui/icons/Close";
 import styles from './Search.module.css'
 
 const datas = [
@@ -309,13 +308,7 @@ function SearchBar({ placeholder}) {
           value={wordEntered}
           onChange={handleFilter}
         />
-        <div className="searchIcon">
-          {filteredData.length === 0 ? (
-            <SearchIcon />
-          ) : (
-            <CloseIcon id="clearBtn" onClick={clearInput} />
-          )}
-        </div>
+        <button className="button green" onClick={clearInput}>X</button>
       </div>
       {filteredData.length != 0 && (
         <div className="dataResult">
