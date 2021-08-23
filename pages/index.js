@@ -9,6 +9,9 @@ export default function home(){
     const redirect_register = () => {
         Router.push('register')
     }
+    const redirect_user = () => {
+        Router.push('user/gabriel')
+    }
 
     return(
             <h1 className={styles.style}>
@@ -21,6 +24,7 @@ export default function home(){
                 <div className="box">
                     <button className={styles.button} onClick={verify_cookie_auth}>get</button>
                     <button className="button green" onClick={redirect_register}>registre</button>
+                    <button className="button red" onClick={redirect_user}>user</button>
                 </div>
                 
             </h1>

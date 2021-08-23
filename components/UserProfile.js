@@ -1,6 +1,5 @@
 import  {verify_cookie_auth}  from "../lib/verify_cookie_auth";
 import React from "react";
-import Router from "next/router";
 
 const initialState = {
     name:'',
