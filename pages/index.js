@@ -3,11 +3,14 @@ import styles from '../pages/style.module.css'
 import LoginForm from '../components/LoginForms'
 import { verify_cookie_auth } from '../lib/verify_cookie_auth'
 import Router from 'next/dist/next-server/server/router'
+import { useRouter } from 'next/router'
 
-export default function home(){
+
+export default function home(){ 
+    const router = useRouter()
 
     const redirect_register = () => {
-        Router.push('register')
+        router.push('/register')
     }
     const redirect_user = () => {
         Router.push('user/gabriel')
@@ -17,7 +20,7 @@ export default function home(){
             <h1 className={styles.style}>
                 
                 Read{' '}
-                <Link href="/posts/first-post">
+                <Link href="/home">
                     <a>this page!</a>
                 </Link>
                 <LoginForm></LoginForm>
