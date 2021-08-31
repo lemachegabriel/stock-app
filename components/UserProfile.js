@@ -13,7 +13,6 @@ class UserInfo extends React.Component{
         const data = await verify_cookie_auth()
         if(data){
             this.setState({name: data['user']['name']})
-            console.log(data['user']['name'])
             return true
         }else{
             console.log(data)

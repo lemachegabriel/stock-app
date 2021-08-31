@@ -1,4 +1,5 @@
 import { registerUser } from '../lib/register';
+import { createPortfolio } from '../lib/createPortfolio';
 import React from 'react';
 
 const initialState = {
@@ -44,10 +45,13 @@ class RegisterForm extends React.Component {
         const isValid = this.validate()
         if(isValid){
             const data = await registerUser(name, email, password)
-            if(data){
-                this.setState({errorMessage:data.error})
-                console.log(data.error)
+            if(data["errorStatus"] == 400){
+                this.setState({errorMessage : data["message"]['error']})
                 data.error = this.state.errorMessage
+            }else{
+                const id = data["message"]["user"]["_id"]
+                //console.log(data["message"]["user"]["_id"])
+                createPortfolio(id)
             }
         }
     }

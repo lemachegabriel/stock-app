@@ -60,7 +60,7 @@ function SearchBar({ placeholder}) {
         <div className={styles.dataResult}>
           {filteredData.slice(0, 5).map((value, key) => {
             return (
-              <Link className={styles.dataItem} href={`/stocks/${value}`} target="_blank" key={value} to={{pathname:'./StockData', state:value}}>
+              <Link className={styles.dataItem} href={`/stocks/${value}`} target="_blank" key={value}>
                 <p>{value}</p>  
               </Link>
             );
