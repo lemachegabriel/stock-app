@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import StockData from '../../components/StockData'
+import Operation from '../../components/OperationForm'
 
 const Post = () => {
   const router = useRouter()
@@ -10,6 +11,9 @@ const Post = () => {
       
       <p>Post: {pid}</p>
       <StockData></StockData>
+      
+      <Operation></Operation>
+      
     </div>
   )
 }

@@ -11,11 +11,10 @@ class UserInfo extends React.Component{
     
     validate = async () => {
         const data = await verify_cookie_auth()
-        if(data){
+        if(data['auth']){
             this.setState({name: data['user']['name']})
             return true
         }else{
-            console.log(data)
             return false
         }        
     } 

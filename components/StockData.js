@@ -40,7 +40,7 @@ class StockData extends React.Component {
         return(
             <div>
                 <p>
-                    {this.state.vari}
+                    {this.state.close}
                 </p>
                 <p>
                     {this.state.open}

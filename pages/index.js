@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import styles from '../pages/style.module.css'
 import LoginForm from '../components/LoginForms'
-import { verify_cookie_auth } from '../lib/verify_cookie_auth'
 import Router from 'next/dist/next-server/server/router'
 import { useRouter } from 'next/router'
 
@@ -25,7 +24,6 @@ export default function home(){
                 </Link>
                 <LoginForm></LoginForm>
                 <div className="box">
-                    <button className={styles.button} onClick={verify_cookie_auth}>get</button>
                     <button className="button green" onClick={redirect_register}>registre</button>
                     <button className="button red" onClick={redirect_user}>user</button>
                 </div>
